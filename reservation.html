@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Réserver | Karestock Paris</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+Karestock
+</div>
+
+<nav>
+<a href="index.html">Accueil</a>
+<a href="reservation.html">Réserver</a>
+</nav>
+
+</header>
+
+
+
+<section>
+
+<h1>
+Réservez votre espace de stockage
+</h1>
+
+<p>
+Paris 20e - Espace privé 1m² - 60€/mois
+</p>
+
+
+<div class="boxes">
+
+
+<button onclick="selectBox('Box 1')">
+Box 1<br>
+🟢 Disponible
+</button>
+
+
+<button onclick="selectBox('Box 2')">
+Box 2<br>
+🟢 Disponible
+</button>
+
+
+<button onclick="selectBox('Box 3')">
+Box 3<br>
+🟢 Disponible
+</button>
+
+
+<button onclick="selectBox('Box 4')">
+Box 4<br>
+🟢 Disponible
+</button>
+
+
+<button onclick="selectBox('Box 5')">
+Box 5<br>
+🟢 Disponible
+</button>
+
+
+<button onclick="selectBox('Box 6')">
+Box 6<br>
+🟢 Disponible
+</button>
+
+
+<button onclick="selectBox('Box 7')">
+Box 7<br>
+🟢 Disponible
+</button>
+
+
+<button onclick="selectBox('Box 8')">
+Box 8<br>
+🟢 Disponible
+</button>
+
+
+</div>
+
+
+
+<h2>
+Votre demande
+</h2>
+
+
+<form action="mailto:contact@karestock.fr"
+method="post"
+enctype="text/plain">
+
+
+<input 
+id="box"
+name="Espace choisi"
+placeholder="Choisissez un espace"
+readonly>
+
+
+
+<label>
+Date souhaitée :
+</label>
+
+
+<input 
+type="date"
+name="Date début"
+required>
+
+
+
+<select name="Profil">
+
+<option>
+Particulier
+</option>
+
+<option>
+Professionnel
+</option>
+
+</select>
+
+
+
+<input 
+name="Nom"
+placeholder="Nom"
+required>
+
+
+
+<input 
+name="Email"
+placeholder="Email"
+required>
+
+
+
+<textarea 
+name="Message"
+placeholder="Votre besoin">
+</textarea>
+
+
+
+<button>
+Envoyer la demande
+</button>
+
+
+</form>
+
+
+</section>
+
+
+<script src="reservation.js"></script>
+
+</body>
+
+</html>
