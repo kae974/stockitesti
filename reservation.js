@@ -1,5 +1,5 @@
-function selectBox(box){
+function choisirBox(box){
 
-document.getElementById("box").value = box;
+document.getElementById("boxChoisi").value = box;
 
 }
