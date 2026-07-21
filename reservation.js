@@ -11,10 +11,10 @@ fetch("box.json")
   .then(response => response.json())
   .then(data => {
 
-    const conteneur = document.querySelector(".boxes");
+    const conteneur = document.querySelector(".box");
     conteneur.innerHTML = "";
 
-    data.boxes.forEach(box => {
+    data.box.forEach(box => {
 
       const bouton = document.createElement("button");
 
