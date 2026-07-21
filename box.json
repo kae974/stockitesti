@@ -33,7 +33,7 @@
     {
       "id": 7,
       "nom": "Box 7",
-      "disponible": true
+      "disponible": false
     },
     {
       "id": 8,
