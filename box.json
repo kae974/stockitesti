@@ -1,0 +1,44 @@
+{
+  "boxes": [
+    {
+      "id": 1,
+      "nom": "Box 1",
+      "disponible": true
+    },
+    {
+      "id": 2,
+      "nom": "Box 2",
+      "disponible": false
+    },
+    {
+      "id": 3,
+      "nom": "Box 3",
+      "disponible": true
+    },
+    {
+      "id": 4,
+      "nom": "Box 4",
+      "disponible": true
+    },
+    {
+      "id": 5,
+      "nom": "Box 5",
+      "disponible": false
+    },
+    {
+      "id": 6,
+      "nom": "Box 6",
+      "disponible": true
+    },
+    {
+      "id": 7,
+      "nom": "Box 7",
+      "disponible": true
+    },
+    {
+      "id": 8,
+      "nom": "Box 8",
+      "disponible": true
+    }
+  ]
+}
