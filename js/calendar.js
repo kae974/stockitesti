@@ -1,88 +1,89 @@
 let calendar;
 
 
-async function chargerReservations(){
+async function chargerDonnees() {
 
+    const response = await fetch("data/reservations.json");
 
-const reponse = await fetch("data/reservations.json");
+    const data = await response.json();
 
-const donnees = await reponse.json();
-
-
-return donnees.boxes;
+    return data.boxes;
 
 }
 
 
 
-
-async function afficherCalendrier(boxId){
-
-
-const boxes = await chargerReservations();
+async function afficherCalendrier(boxId) {
 
 
-const box = boxes.find(
-b => b.id === boxId
-);
+    const boxes = await chargerDonnees();
 
 
-
-let evenements = [];
-
-
-box.reservations.forEach(reservation => {
+    const box = boxes.find(
+        element => element.id === boxId
+    );
 
 
-evenements.push({
-
-title:"Occupé",
-
-start:reservation.debut,
-
-end:reservation.fin,
-
-color:"red"
-
-});
+    let evenements = [];
 
 
-});
+    box.reservations.forEach(reservation => {
 
 
+        evenements.push({
 
-if(calendar){
+            title: "Occupé",
 
-calendar.destroy();
+            start: reservation.debut,
 
-}
+            end: reservation.fin,
+
+            display: "background",
+
+            backgroundColor: "#ff4d4d"
+
+        });
+
+
+    });
 
 
 
-calendar = new FullCalendar.Calendar(
+    if(calendar){
 
-document.getElementById("calendar"),
+        calendar.destroy();
 
-
-{
-
-initialView:"dayGridMonth",
-
-locale:"fr",
+    }
 
 
-events:evenements,
+
+    calendar = new FullCalendar.Calendar(
+
+        document.getElementById("calendar"),
 
 
-height:600
+        {
+
+            initialView: "dayGridMonth",
+
+            locale: "fr",
 
 
-}
-
-);
+            selectable: true,
 
 
-calendar.render();
+            events: evenements,
+
+
+            height: "auto"
+
+
+        }
+
+    );
+
+
+    calendar.render();
 
 
 }
@@ -93,10 +94,12 @@ calendar.render();
 document
 .getElementById("choixBox")
 .addEventListener(
-"change",
-(e)=>{
 
-afficherCalendrier(e.target.value);
+"change",
+
+function(){
+
+    afficherCalendrier(this.value);
 
 }
 
