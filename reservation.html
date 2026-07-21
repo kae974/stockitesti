@@ -8,9 +8,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Réserver | Karestock</title>
+<title>Karestock - Disponibilités</title>
 
-<link rel="stylesheet" href="style.css">
+
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css" rel="stylesheet">
+
 
 </head>
 
@@ -18,42 +20,9 @@
 <body>
 
 
-<header>
-
-<div class="logo">
-Karestock
-</div>
-
-
-<nav>
-
-<a href="index.html">
-Accueil
-</a>
-
-<a href="reservation.html">
-Réserver
-</a>
-
-</nav>
-
-</header>
-
-
-
-
-<section>
-
-
 <h1>
-Réservez votre espace
+Karestock - Réservation
 </h1>
-
-
-<p>
-Paris 20e - Box individuel 1m² - 60€/mois
-</p>
-
 
 
 <h2>
@@ -61,139 +30,28 @@ Choisissez votre box
 </h2>
 
 
-<div class="boxes">
+<select id="choixBox">
 
-
-<button onclick="choisirBox('Box 1')">
-Box 1<br>🟢 Disponible
-</button>
-
-
-<button onclick="choisirBox('Box 2')">
-Box 2<br>🟢 Disponible
-</button>
-
-
-<button onclick="choisirBox('Box 3')">
-Box 3<br>🟢 Disponible
-</button>
-
-
-<button onclick="choisirBox('Box 4')">
-Box 4<br>🟢 Disponible
-</button>
-
-
-<button onclick="choisirBox('Box 5')">
-Box 5<br>🟢 Disponible
-</button>
-
-
-<button onclick="choisirBox('Box 6')">
-Box 6<br>🟢 Disponible
-</button>
-
-
-<button onclick="choisirBox('Box 7')">
-Box 7<br>🟢 Disponible
-</button>
-
-
-<button onclick="choisirBox('Box 8')">
-Box 8<br>🟢 Disponible
-</button>
-
-
-</div>
-
-
-
-
-<h2>
-Votre demande
-</h2>
-
-
-<form>
-
-
-<input 
-id="boxChoisi"
-placeholder="Box choisi"
-readonly>
-
-
-
-<label>
-Date souhaitée de début :
-</label>
-
-
-<input 
-type="date"
-required>
-
-
-<label>
-Date souhaitée de fin :
-</label>
-
-
-<input 
-type="date"
-required>
-
-
-
-<select>
-
-<option>
-Particulier
-</option>
-
-<option>
-Professionnel
-</option>
+<option value="box1">Box 1</option>
+<option value="box2">Box 2</option>
+<option value="box3">Box 3</option>
+<option value="box4">Box 4</option>
+<option value="box5">Box 5</option>
+<option value="box6">Box 6</option>
+<option value="box7">Box 7</option>
+<option value="box8">Box 8</option>
 
 </select>
 
 
 
-<input
-placeholder="Nom"
-required>
+<div id="calendar"></div>
 
 
-
-<input
-placeholder="Email"
-required>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
 
 
-
-<input
-placeholder="Téléphone">
-
-
-
-<textarea placeholder="Votre besoin">
-</textarea>
-
-
-
-<button type="submit">
-Envoyer ma demande
-</button>
-
-
-</form>
-
-
-</section>
-
-
-
-<script src="reservation.js"></script>
+<script src="js/calendar.js"></script>
 
 
 </body>
