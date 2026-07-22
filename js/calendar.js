@@ -249,6 +249,7 @@ document.getElementById("resultatReservation").innerHTML =
 "Location minimum 30 jours<br>"+
 "Prix : "+PRIX+" €";
 
+document.getElementById("paypal-section").style.display = "block";
 
 }
 
