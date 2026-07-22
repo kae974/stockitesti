@@ -260,7 +260,7 @@ document.getElementById("resultatReservation").innerHTML =
 
 "🔴 Cette période est indisponible";
 
-
+document.getElementById("paypal-section").style.display = "none";
 }
 
 
