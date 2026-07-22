@@ -224,5 +224,20 @@ grid-template-columns:repeat(2,1fr);
 font-size:32px;
 
 }
+  #paypal-section{
+
+display:none;
+
+margin-top:30px;
+
+background:white;
+
+padding:25px;
+
+border-radius:20px;
+
+text-align:center;
+
+}
 
 }
